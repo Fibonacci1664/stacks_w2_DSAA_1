@@ -8,32 +8,45 @@ public:
 	/** Return true if the stack is empty, false otherwise. */
 	bool empty()
 	{
-		return false; // FIXME implement this properly
+		if (stackTop < 0)
+		{
+			return true;
+		}
+
+		return false;
 	}
 
 	/** Add an item to the top of the stack. */
 	void push(int value)
 	{
-		// FIXME implement this properly
+		++stackTop;
+		nums[stackTop] = value;		
 	}
 
 	/** Remove the item at the top of the stack. */
 	void pop()
 	{
-		// FIXME implement this properly
+		nums[stackTop] = 0;
+		--stackTop;
+		++popCount;
 	}
 
 	/** Return the item at the top of the stack. */
 	int top()
 	{
-		return 42; // FIXME implement this properly
+		return nums[stackTop];
 	}
 
 	/** Return the number of items on the stack. */
 	int size()
 	{
-		return 42; // FIXME implement this properly
+		return (popCount + stackTop);
 	}
+
+private:
+	int nums[10];
+	int stackTop = -1;
+	int popCount = 0;
 };
 
 #endif

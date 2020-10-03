@@ -15,7 +15,31 @@ using std::stack;
 // Test the stack class.
 void testStack()
 {
-	// FIXME Put stuff here
+	CustomStack myStack;
+
+	assert(myStack.empty());
+
+	myStack.push(7);
+	myStack.push(5);
+	/*myStack.push(3);
+	myStack.push(1);
+	myStack.push(9);*/
+
+	assert(myStack.top() == 5);
+
+	std::cout << "Top value: " << myStack.top() << '\n';
+
+	myStack.pop();
+
+	assert(myStack.top() == 7);
+
+	std::cout << "Top value: " << myStack.top() << '\n';
+
+	assert(myStack.size() == 1);
+
+	myStack.pop();
+
+	std::cout << "Is empty: " << myStack.empty() << '\n';		// True = 1, False = 0
 }
 
 int main(int argc, char *argv[])
