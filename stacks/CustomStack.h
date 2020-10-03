@@ -2,7 +2,7 @@
 #define CUSTOMSTACK_H
 
 /** A stack of integers. */
-class CustomStack
+template <typename T> class CustomStack
 {
 public:
 	/** Return true if the stack is empty, false otherwise. */
@@ -17,7 +17,7 @@ public:
 	}
 
 	/** Add an item to the top of the stack. */
-	void push(int value)
+	void push(T value)
 	{
 		++stackTop;
 		nums[stackTop] = value;		
@@ -44,9 +44,9 @@ public:
 	}
 
 private:
-	int nums[10];
-	int stackTop = -1;
-	int popCount = 0;
+	T nums[10];
+	T stackTop = -1;
+	T popCount = 0;
 };
 
 #endif

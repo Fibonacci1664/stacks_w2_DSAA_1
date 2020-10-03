@@ -15,7 +15,7 @@ using std::stack;
 // Test the stack class.
 void testStack()
 {
-	CustomStack myStack;
+	CustomStack<int> myStack;
 
 	assert(myStack.empty());
 
