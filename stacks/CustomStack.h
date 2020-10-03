@@ -32,13 +32,13 @@ public:
 	}
 
 	/** Return the item at the top of the stack. */
-	int top()
+	T top()
 	{
 		return nums[stackTop];
 	}
 
 	/** Return the number of items on the stack. */
-	int size()
+	T size()
 	{
 		return (popCount + stackTop);
 	}
