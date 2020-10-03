@@ -32,7 +32,7 @@ public:
 	}
 
 	/** Return the item at the top of the stack. */
-	T top()
+	T& top()
 	{
 		return nums[stackTop];
 	}
